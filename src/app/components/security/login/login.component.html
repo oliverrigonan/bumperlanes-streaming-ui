@@ -1,1 +1,24 @@
-<p>login works!</p>
+<br /><br />
+<div fxLayout="row" fxLayout.xs="column">
+    <div fxFlex="30"></div>
+    <div fxFlex="40">
+        <p-card header="Login">
+            <div class="p-fluid p-formgrid p-grid">
+                <div class="p-field p-col">
+                    <label for="firstname1">Email</label>
+                    <input id="firstname1" type="text" pInputText>
+                </div>
+                <div class="p-field p-col">
+                    <label for="lastname1">Password</label>
+                    <input id="lastname1" type="password" pInputText>
+                </div>
+            </div>
+            <br />
+            <a routerLink="/security/register">Click here to register!</a>
+            <br />
+            <br />
+            <button pButton type="button" label="Login"></button>
+        </p-card>
+    </div>
+    <div fxFlex="30"></div>
+</div>

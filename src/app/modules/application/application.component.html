@@ -1,1 +1,12 @@
-<p>application works!</p>
+<p-menubar [model]="items">
+    <button pButton label="Logout" icon="pi pi-sign-out" routerLink='/security/login'></button>
+</p-menubar>
+
+<p-sidebar [(visible)]="display">
+    <h1>
+        STREAMING
+    </h1>
+    <p-menu [model]="menu_items" [style]="{'width':'100%'}"></p-menu>
+</p-sidebar>
+
+<router-outlet></router-outlet>
