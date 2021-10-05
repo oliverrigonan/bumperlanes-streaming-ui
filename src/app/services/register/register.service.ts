@@ -27,7 +27,7 @@ export class RegisterService {
       let body = "name=" + registerModel.name +
         "&email=" + registerModel.email +
         "&password=" + registerModel.password +
-        "&password_confirmation=" + registerModel.password_confirmation;
+        "&password_confirmation=" + registerModel.confirmPassword;
 
       this.httpClient.post(url, body, this.options).subscribe(
         response => {

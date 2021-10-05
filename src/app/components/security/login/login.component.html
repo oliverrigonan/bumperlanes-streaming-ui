@@ -5,19 +5,21 @@
         <p-card header="Login">
             <div class="p-fluid p-formgrid p-grid">
                 <div class="p-field p-col">
-                    <label for="firstname1">Email</label>
-                    <input id="firstname1" type="text" pInputText>
+                    <label for="email">Email</label>
+                    <input id="email" type="text" pInputText [disabled]="isProcessing" [(ngModel)]="loginModel.email">
                 </div>
                 <div class="p-field p-col">
-                    <label for="lastname1">Password</label>
-                    <input id="lastname1" type="password" pInputText>
+                    <label for="password">Password</label>
+                    <input id="password" type="password" pInputText [disabled]="isProcessing"
+                        [(ngModel)]="loginModel.password">
                 </div>
             </div>
             <br />
             <a routerLink="/security/register">Click here to register!</a>
             <br />
             <br />
-            <button pButton type="button" label="Login"></button>
+            <button pButton type="button" label="Login" (click)="login()" [disabled]="isProcessing"></button>
+            <p-toast></p-toast>
         </p-card>
     </div>
     <div fxFlex="30"></div>

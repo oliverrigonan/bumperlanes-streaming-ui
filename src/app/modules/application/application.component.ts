@@ -21,10 +21,10 @@ export class ApplicationComponent implements OnInit {
 
   ngOnInit(): void {
     this.items = [
-      { label: 'Menu', icon: 'pi pi-fw pi-bars', command: () => this.displaySideBar(), },
-      { label: 'Home', icon: 'pi pi-fw pi-home', routerLink: "/main/home" },
-      { label: 'About', icon: 'pi pi-fw pi-info-circle' },
-      { label: 'Contact', icon: 'pi pi-fw pi-phone' }
+      { label: 'Menu', icon: '', command: () => this.displaySideBar(), },
+      { label: 'Dashboard', icon: 'pi pi-fw pi-bars' },
+      { label: 'Shows', icon: 'pi pi-fw pi-desktop' },
+      { label: 'Prices', icon: 'pi pi-fw pi-tag' }
     ];
 
     this.menu_items = [

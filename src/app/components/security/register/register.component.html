@@ -5,25 +5,28 @@
         <p-card header="Register">
             <div class="p-fluid p-formgrid p-grid">
                 <div class="p-field p-col">
-                    <label for="firstname1">Name</label>
-                    <input id="firstname1" type="text" pInputText>
+                    <label for="name">Name</label>
+                    <input id="name" type="text" pInputText [disabled]="isProcessing" [(ngModel)]="registerModel.name">
                 </div>
                 <div class="p-field p-col">
-                    <label for="firstname1">Email</label>
-                    <input id="firstname1" type="text" pInputText>
+                    <label for="email">Email</label>
+                    <input id="email" type="text" pInputText [disabled]="isProcessing"
+                        [(ngModel)]="registerModel.email">
                 </div>
                 <div class="p-field p-col">
-                    <label for="lastname1">Password</label>
-                    <input id="lastname1" type="password" pInputText>
+                    <label for="password">Password</label>
+                    <input id="password" type="password" pInputText [disabled]="isProcessing"
+                        [(ngModel)]="registerModel.password">
                 </div>
                 <div class="p-field p-col">
-                    <label for="lastname1">Confirm Password</label>
-                    <input id="lastname1" type="password" pInputText>
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input id="confirmPassword" type="password" pInputText [disabled]="isProcessing"
+                        [(ngModel)]="registerModel.confirmPassword">
                 </div>
             </div>
             <br />
             <br />
-            <button pButton type="button" label="Register"></button>
+            <button pButton type="button" label="Register" (click)="register()" [disabled]="isProcessing"></button>
         </p-card>
     </div>
     <div fxFlex="30"></div>

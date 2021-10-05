@@ -30,17 +30,16 @@ export class LoginService {
         response => {
           if (response != null) {
             let data = response;
-            console.log(data);
 
             observer.next([true, ""]);
             observer.complete();
           } else {
-            observer.next([false, "Username or password is incorrect."]);
+            observer.next([false, "Email or password is incorrect."]);
             observer.complete();
           }
         },
         error => {
-          observer.next([false, error["error"].error_description]);
+          observer.next([false, error["error"].message]);
           observer.complete();
         });
     });
