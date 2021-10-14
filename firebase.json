@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "streamingdb",
+    "public": "dist/bumperlanes-streaming-ui",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
